@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/cjfrancis1/sparFinder/issues"
   },
-  "homepage": "https://github.com/cjfrancis1/sparFinder#readme"
+  "homepage": "https://github.com/cjfrancis1/sparFinder#readme",
+  "dependencies": {
+    "angular": "*",
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*"
+  }
 }
