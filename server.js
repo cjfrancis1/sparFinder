@@ -7,7 +7,7 @@ const express = require('express'),
     bodyParser = require('body-parser');
 
 const app = express();
-const router = require('./api');
+const router = require('./node/api');
 
 app.set('port', process.env.PORT || 5000);
 app.set('host', config.host);
