@@ -6607,6 +6607,13 @@ button.close {
 @font-face {
   font-family: Norwester;
   src: url("../../fonts/norwester.otf") format("opentype"); }
+/* HTML and Body
+====================================*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
 /* Header and Navigation
 ====================================*/
 .navbar-brand {
@@ -6634,5 +6641,12 @@ button.close {
     color: #777; }
   .navbar-collapse li:not(:last-of-type) {
     border-bottom: 1px solid #eee; } }
+/* Map
+====================================*/
+.index-pre-body {
+  height: 414px; }
+
+.index-pre-body__map {
+  height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

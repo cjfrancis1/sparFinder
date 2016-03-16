@@ -8,35 +8,42 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body ng-app="sparFinder">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed navbar__nav-elem" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <span><img alt="SparFinder Logo" src="img/sparFinder_logo.png" /></span>
-                    <span class="navbar-brand__brand-name h3">SparFinder</span>
-                </a>
-            </div> <!-- /.navbar-header -->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed navbar__nav-elem" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span><img alt="SparFinder Logo" src="img/sparFinder_logo.png" /></span>
+                        <span class="navbar-brand__brand-name h3">SparFinder</span>
+                    </a>
+                </div> <!-- /.navbar-header -->
 
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Log In</a></li>
-                    <li><a class="btn btn-default" href="#">Sign Up</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Log In</a></li>
+                        <li><a class="btn btn-default" href="#">Sign Up</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <section class="index-pre-body" ng-controller="mapCTRL">
+        <div id="map" class="index-pre-body__map"></div>
+    </section>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9wfz7npNFeCyXwI921DY2YvKOGtVxJg&callback=initMap" async defer></script>
     <script type="text/javascript" src="third_party/jquery/js/jquery.min.js"></script>
     <script type="text/javascript" src="third_party/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="third_party/bootstrap/js/transition.js"></script>
     <script type="text/javascript" src="third_party/bootstrap/js/collapse.js"></script>
     <script type="text/javascript" src="third_party/angular/js/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/map.js"></script>
     <!--<script src="/scripts/vendor.bundle.js"></script>-->
     <!--<script src="/scripts/app.bundle.js"></script>-->
 </body>
