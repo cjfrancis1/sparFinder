@@ -6614,6 +6614,7 @@ button.close {
 
 .navbar-brand--brand-name {
   font-family: Norwester, sans-serif;
-  color: #E35647; }
+  color: #E35647;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=styles.css.map */
