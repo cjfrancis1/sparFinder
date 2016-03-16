@@ -24,3 +24,18 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .navbar-collapse {
+    a {
+      background-color: inherit;
+      text-align: left;
+      border: inherit;
+      color: $headerTextColor
+    }
+
+    li:not(:last-of-type) {
+      border-bottom: 1px solid #eee;
+    }
+  }
+}

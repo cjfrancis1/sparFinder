@@ -6626,5 +6626,13 @@ button.close {
     padding-top: 15px; }
     .navbar-nav li:last-of-type {
       margin-right: 15px; } }
+@media screen and (max-width: 767px) {
+  .navbar-collapse a {
+    background-color: inherit;
+    text-align: left;
+    border: inherit;
+    color: #777; }
+  .navbar-collapse li:not(:last-of-type) {
+    border-bottom: 1px solid #eee; } }
 
 /*# sourceMappingURL=styles.css.map */
