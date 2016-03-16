@@ -6617,4 +6617,14 @@ button.close {
   color: #E35647;
   vertical-align: middle; }
 
+.navbar-toggle {
+  height: 50px;
+  margin-top: 15px; }
+
+@media screen and (min-width: 768px) {
+  .navbar-nav {
+    padding-top: 15px; }
+    .navbar-nav li:last-of-type {
+      margin-right: 15px; } }
+
 /*# sourceMappingURL=styles.css.map */

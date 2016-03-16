@@ -10,3 +10,17 @@
   color: $brandRedPrimary;
   vertical-align: middle;
 }
+
+.navbar-toggle {
+  height: 50px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav {
+    padding-top: 15px;
+    & li:last-of-type {
+      margin-right: 15px;
+    }
+  }
+}
