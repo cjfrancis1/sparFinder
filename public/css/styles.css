@@ -6612,7 +6612,7 @@ button.close {
 .navbar-brand {
   height: 80px; }
 
-.navbar-brand--brand-name {
+.navbar-brand__brand-name {
   font-family: Norwester, sans-serif;
   color: #E35647;
   vertical-align: middle; }
