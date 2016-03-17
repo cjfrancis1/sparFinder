@@ -1,21 +1,33 @@
+"use strict";
 angular.module('sparFinder')
-    .controller('mapCTRL', function ($scope) {
+    .controller('mapCTRL', function ($scope, dataService) {
         var map;
+
         window.initMap = function () {
-            var myLatLng = {lat: 27.258, lng: -80.352};
+            dataService.getUsers(function (response) {
+                $scope.users = response.data.users;
+                $scope.centerLatLng = {
+                    lat: $scope.users[0]['lat'],
+                    lng: $scope.users[0]['lng']
+                };
 
-            // Create a map object and specify the DOM element for display.
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: myLatLng,
-                scrollwheel: true,
-                zoom: 7
+                // Create a map object and specify the DOM element for display.
+                $scope.map = new google.maps.Map(document.getElementById('map'), {
+                    center: $scope.centerLatLng,
+                    scrollwheel: true,
+                    zoom: 10
+                });
+
+                // Create markers and set its position.
+                for (var i = 0; i < $scope.users.length; i++) {
+                    new google.maps.Marker({
+                        map: $scope.map,
+                        position: $scope.users[i],
+                        title: 'Hello World!'
+                    });
+                }
             });
 
-            // Create a marker and set its position.
-            var marker = new google.maps.Marker({
-                map: map,
-                position: myLatLng,
-                title: 'Hello World!'
-            });
+
         };
     });
