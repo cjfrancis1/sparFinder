@@ -14,7 +14,7 @@ angular.module('sparFinder')
                 // Create a map object and specify the DOM element for display.
                 $scope.map = new google.maps.Map(document.getElementById('map'), {
                     center: $scope.centerLatLng,
-                    scrollwheel: true,
+                    scrollwheel: false,
                     zoom: 10
                 });
 
