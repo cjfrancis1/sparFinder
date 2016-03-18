@@ -3,7 +3,18 @@ angular.module('sparFinder', []);
 "use strict";
 angular.module('sparFinder')
     .controller('mapCTRL', ["$scope", "dataService", function ($scope, dataService) {
-        var map;
+
+        $scope.createMarkers = function (users) {
+            for (var i = 0; i < users.length; i++) {
+                new google.maps.Marker({
+                    map: $scope.map,
+                    position: {
+                        lat: users[i]['lat'],
+                        lng: users[i]['lng']
+                    }
+                });
+            }
+        };
 
         window.initMap = function () {
             dataService.getUsers(function (response) {
@@ -20,16 +31,11 @@ angular.module('sparFinder')
                     zoom: 10
                 });
 
-                // Create markers and set its position.
-                for (var i = 0; i < $scope.users.length; i++) {
-                    new google.maps.Marker({
-                        map: $scope.map,
-                        position: $scope.users[i],
-                        title: 'Hello World!'
-                    });
-                }
+                // Create markers and set they're position.
+                $scope.createMarkers($scope.users);
             });
         };
+
     }]);
 "use strict";
 angular.module('sparFinder')
