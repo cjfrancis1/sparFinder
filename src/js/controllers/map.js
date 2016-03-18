@@ -1,6 +1,6 @@
 "use strict";
 angular.module('sparFinder')
-    .controller('mapCTRL', function ($scope, dataService) {
+    .controller('mapCTRL', ["$scope", "dataService", function ($scope, dataService) {
         var map;
 
         window.initMap = function () {
@@ -27,7 +27,5 @@ angular.module('sparFinder')
                     });
                 }
             });
-
-
         };
-    });
+    }]);
