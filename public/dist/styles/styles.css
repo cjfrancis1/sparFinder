@@ -8028,6 +8028,10 @@ button.close {
 }
 
 @font-face {
+  font-family: 'Norwester';
+  src: url("../../fonts/norwester.eot");
+}
+@font-face {
   font-family: Norwester;
   src: url("../../fonts/norwester.otf") format("opentype");
 }
