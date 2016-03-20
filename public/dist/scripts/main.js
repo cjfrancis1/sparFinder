@@ -2,6 +2,13 @@
 angular.module('sparFinder', []);
 "use strict";
 angular.module('sparFinder')
+    .service('dataService', ['$http', function ($http) {
+       this.getUsers = function (cb) {
+           $http.get('/api/users').then(cb);
+       }
+    }]);
+"use strict";
+angular.module('sparFinder')
     .controller('mapCTRL', ["$scope", "$timeout", "dataService", function ($scope, $timeout, dataService) {
 
         $scope.initMap = function () {
@@ -56,7 +63,6 @@ angular.module('sparFinder')
 
         $scope.simulateQuery = function () {
             dataService.getUsers(function (obj) {
-                console.log(obj);
                 var users = obj.data.response;
                 $scope.updateMap(users);
             });
@@ -64,11 +70,4 @@ angular.module('sparFinder')
 
         $timeout(3000).then($scope.simulateQuery);
 
-    }]);
-"use strict";
-angular.module('sparFinder')
-    .service('dataService', ['$http', function ($http) {
-       this.getUsers = function (cb) {
-           $http.get('/api/users').then(cb);
-       }
     }]);

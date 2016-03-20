@@ -54,7 +54,6 @@ angular.module('sparFinder')
 
         $scope.simulateQuery = function () {
             dataService.getUsers(function (obj) {
-                console.log(obj);
                 var users = obj.data.response;
                 $scope.updateMap(users);
             });
