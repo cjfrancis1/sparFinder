@@ -3,7 +3,7 @@
 const mongoose = require('mongoose'),
     config = require('../config/config.js');
 
-mongoose.connect(config.env.dbURL, function(err) {
+mongoose.connect(process.env.MONGOLAB_URI || config.env.dbURL, function(err) {
     if (err) {
         console.log('err');
     } else {
