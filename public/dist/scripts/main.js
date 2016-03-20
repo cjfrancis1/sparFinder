@@ -50,11 +50,14 @@ angular.module('sparFinder')
 
         $scope.initMap();
 
-        //Delete when actual functionality is implemented
+        /*
+        Delete once actual functionality is implemented
+        *****************************************************/
 
         $scope.simulateQuery = function () {
-            dataService.getUsers(function (response) {
-                var users = response.data.users;
+            dataService.getUsers(function (obj) {
+                console.log(obj);
+                var users = obj.data.response;
                 $scope.updateMap(users);
             });
         };

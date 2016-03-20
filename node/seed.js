@@ -13,6 +13,7 @@ let users = [
         lat: 27.258533,
         lng: -80.35206199999999,
         city: "Port Saint Lucie",
+        state: "FL",
         rank: "blue",
         school: 'Pedro Carvalho Brazilian Jiu Jitsu'
     },
@@ -26,6 +27,7 @@ let users = [
         lat: 27.259914,
         lng: -80.368387,
         city: "Port Saint Lucie",
+        state: "FL",
         rank: "white"
     },
     {
@@ -38,6 +40,7 @@ let users = [
         lat: 27.22043,
         lng: -80.3580549,
         city: "Port Saint Lucie",
+        state: "FL",
         rank: "white"
     }
 ];

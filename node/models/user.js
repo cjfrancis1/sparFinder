@@ -12,6 +12,7 @@ let userSchema = new mongoose.Schema({
     lat: Number,
     lng: Number,
     city: String,
+    state: String,
     area: String,
     rank: String,
     availability: Array,
