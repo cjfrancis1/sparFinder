@@ -13,6 +13,7 @@ let userSchema = new mongoose.Schema({
     lng: Number,
     city: String,
     state: String,
+    zip_code: String,
     area: String,
     rank: String,
     availability: Array,

@@ -14,6 +14,7 @@ let users = [
         lng: -80.35206199999999,
         city: "Port Saint Lucie",
         state: "FL",
+        zip_code: "34953",
         rank: "blue",
         school: 'Pedro Carvalho Brazilian Jiu Jitsu'
     },
@@ -28,6 +29,7 @@ let users = [
         lng: -80.368387,
         city: "Port Saint Lucie",
         state: "FL",
+        zip_code: "34953",
         rank: "white"
     },
     {
@@ -41,6 +43,7 @@ let users = [
         lng: -80.3580549,
         city: "Port Saint Lucie",
         state: "FL",
+        zip_code: "34953",
         rank: "white"
     }
 ];
