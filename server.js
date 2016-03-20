@@ -13,7 +13,7 @@ require(config.app.srcDir + 'seed');
 const router = require(config.app.srcDir + 'api');
 
 app.set('port', process.env.PORT || 8080);
-app.set('host', config.env.host);
+app.set('host', process.env.HOST || config.env.host);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', express.static(path.join(__dirname, 'public')));
