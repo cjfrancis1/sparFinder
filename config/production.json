@@ -1,5 +1,5 @@
 {
     "environment": "production",
-    "host": "http://localhost:8080",
+    "host": "https://sparfinder.herokuapp.com/sparfinder",
     "dbURL": "mongodb://localhost/sparfinder"
 }
