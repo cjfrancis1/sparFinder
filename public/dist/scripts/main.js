@@ -1,11 +1,13 @@
 "use strict";
-angular.module('sparFinder', []);
-"use strict";
-angular.module('sparFinder')
-    .service('dataService', ['$http', function ($http) {
-       this.getUsers = function (cb) {
-           $http.get('/api/users').then(cb);
-       }
+angular.module('sparFinder', ['ngRoute'])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'templates/home.html'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
     }]);
 "use strict";
 angular.module('sparFinder')
@@ -70,4 +72,11 @@ angular.module('sparFinder')
 
         $timeout(3000).then($scope.simulateQuery);
 
+    }]);
+"use strict";
+angular.module('sparFinder')
+    .service('dataService', ['$http', function ($http) {
+       this.getUsers = function (cb) {
+           $http.get('/api/users').then(cb);
+       }
     }]);

@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="dist/images/favicon.ico">
     <link rel="stylesheet" href="dist/styles/styles.min.css" type="text/css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9wfz7npNFeCyXwI921DY2YvKOGtVxJg"></script>
+    <script type="text/javascript" src="dist/scripts/vendor/vendor.min.js"></script>
+    <script type="text/javascript" src="dist/scripts/main.min.js"></script>
     <title>SparFinder</title>
 </head>
 <body ng-app="sparFinder">
+
     <header>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -19,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/#">
                         <span><img alt="SparFinder Logo" src="dist/images/sparFinder_logo.png" /></span>
                         <span class="navbar-brand__brand-name h3">SparFinder</span>
                     </a>
@@ -34,13 +39,7 @@
             </div><!-- /.container-fluid -->
         </nav>
     </header>
-    <section class="index-pre-body" ng-controller="mapCTRL">
-        <div id="map" class="index-pre-body__map"></div>
-    </section>
-    <footer>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9wfz7npNFeCyXwI921DY2YvKOGtVxJg"></script>
-        <script type="text/javascript" src="dist/scripts/vendor/vendor.min.js"></script>
-        <script type="text/javascript" src="dist/scripts/main.min.js"></script>
-    </footer>
+
+    <div ng-view></div>
 </body>
 </html>
