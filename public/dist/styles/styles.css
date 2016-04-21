@@ -8083,11 +8083,11 @@ html, body {
 }
 /* Map
 ====================================*/
-.index-pre-body {
+.map-wrapper {
   height: 414px;
 }
 
-.index-pre-body__map {
+.map-wrapper__map {
   height: 100%;
 }
 
