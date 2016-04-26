@@ -1,0 +1,25 @@
+/* Map
+====================================*/
+
+.home {
+  .map-wrapper {
+    height: 414px;
+    position: relative;
+  }
+
+  .map-wrapper__map {
+    height: 100%;
+  }
+
+  .search-bar-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: -42px;
+  }
+
+  .search-bar {
+    min-height: 70px;
+    padding: 12px;
+    background: #505050;
+  }
+}
